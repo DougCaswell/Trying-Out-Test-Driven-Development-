@@ -1,5 +1,4 @@
 import mapChooser from '../mapChooser';
-import { isRegExp } from 'util';
 
 describe("mapChooser", function () {
     it("returns an image based on the input given to it", function () {

@@ -3,5 +3,5 @@ import { shallow } from 'enzyme';
 import App from '../App';
 
 it('Shallow rendering of App should work', () => {
-    shallow(<App />);
+    let mountedApp = shallow(<App />);
 });
