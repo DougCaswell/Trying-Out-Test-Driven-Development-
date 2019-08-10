@@ -8,8 +8,10 @@ class StoreLocator extends Component {
         return (
             <div className='StoreLocator'>
                 <Header />
-                <Button />
-                <Button />
+                <div className='buttonContainer'>
+                    <Button />
+                    <Button />
+                </div>
                 <Map />
             </div>
         );
