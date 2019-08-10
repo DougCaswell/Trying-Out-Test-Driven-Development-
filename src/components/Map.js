@@ -6,7 +6,7 @@ class Map extends Component {
         let imagePath = `images/${this.props.imageName || 'none.png'}`;
         let storeName = imagePath.slice(7, imagePath.length - 4) + '\'s shop';
 
-        if (storeName === 'none\'s shop') { storeName = 'All shops' }
+        if (storeName === 'none\'s shop') { storeName = 'all shops' }
 
         let altTag = `Map of ${storeName}`
 
