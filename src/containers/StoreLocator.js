@@ -43,7 +43,7 @@ class StoreLocator extends Component {
                 <div className='buttonContainer'>
                     {storeButtons}
                 </div>
-                <Map imageName={this.state.currentMap} location={this.props.location} />
+                <Map imageName={this.state.currentMap} />
             </div>
         );
     }
