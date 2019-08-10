@@ -14,9 +14,9 @@ describe('Button', () => {
         let mountedButton = shallow(<Button />);
     });
 
-    it('renders a button', () => {
+    it('renders three buttons', () => {
         const button = mountedButton.find('button');
-        expect(button.length).toBe(1);
+        expect(button.length).toBe(3);
     });
 
 });
