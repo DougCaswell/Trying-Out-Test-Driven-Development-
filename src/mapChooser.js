@@ -1,6 +1,6 @@
-function mapChooser(store) {
-    if (!store) { store = 'default' }
-    let imageName = store + ".jpg";
+function mapChooser(location) {
+    if (!location) { location = 'none' }
+    let imageName = location + ".png";
     return imageName;
 }
 

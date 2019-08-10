@@ -14,10 +14,17 @@ describe('Button', () => {
         let mountedButton = shallow(<Button />);
     });
 
-    it('renders three buttons', () => {
+    it('renders a button', () => {
         const button = mountedButton.find('button');
-        expect(button.length).toBe(3);
+        expect(button.length).toBe(1);
     });
+
+    it('call a function passed to it when clicked', () => {
+        const mockCallback = jest.fn();
+        const mountedButtonWithCallback = shallow(<Button handleClick={mockCallback} />);
+        mountedButtonWithCallback.find('button').simulate('click');
+        expect(mockCallback.mock.calls.length).toEqual(1);
+    })
 
 });
 
