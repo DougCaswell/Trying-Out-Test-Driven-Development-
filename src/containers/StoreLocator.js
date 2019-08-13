@@ -19,7 +19,6 @@ class StoreLocator extends Component {
 
     async componentDidMount() {
         let response = await Axios.get('http://localhost:3000/data/shops.json');
-        console.log(response)
         this.setState({
             shops: response.data.shops
         })
@@ -30,8 +29,6 @@ class StoreLocator extends Component {
     }
 
     render() {
-        console.log(this.state.shops)
-
         let storeButtons = this.state.shops.map((shop, id) => {
             return (<Button handleClick={this.chooseMap} location={shop.location} key={id} />);
         });
@@ -39,7 +36,7 @@ class StoreLocator extends Component {
         return (
             <div className='StoreLocator'>
                 <Header />
-                <div className='buttonContainer'>
+                <div className='buttons'>
                     {storeButtons}
                 </div>
                 <Map imageName={this.state.currentMap} />
